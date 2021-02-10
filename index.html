@@ -4,13 +4,11 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-    <title>Welcome to my Library</title>
+    <title>Welcome to My Potter Library</title>
 </head>
 
 <body>
@@ -29,73 +27,77 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
-                        aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
+    <div id="message"></div>
     <div class="container my-3">
-        <h1>My Library</h1>
+        <h1>Harry Library</h1>
         <hr>
         <form id="libraryForm">
-            <div class="row mb-3">
+            <div class="form-group row">
                 <label for="bookName" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="bookName" placeholder="Book Name">
                 </div>
             </div>
-            <div class="row mb-3">
-                <label for="author" class="col-sm-2 col-form-label">Author</label>
+            <br>
+            <div class="form-group row">
+                <label for="Author" class="col-sm-2 col-form-label">Author</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="author" placeholder="Author">
                 </div>
             </div>
-            <fieldset class="row mb-3">
-                <legend class="col-form-label col-sm-2 pt-0">Type</legend>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction" checked>
-                        <label class="form-check-label" for="fiction">
-                            Fiction
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="type" id="loveStory" value="loveStory">
-                        <label class="form-check-label" for="loveStory">
-                            Love Story
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="type" id="horror" value="horror">
-                        <label class="form-check-label" for="horror">
-                            Horror
-                        </label>
+            <br>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction"
+                                checked>
+                            <label class="form-check-label" for="fiction">
+                                Fiction
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="programming"
+                                value="programming">
+                            <label class="form-check-label" for="programming">
+                                Computer Programming
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="type" id="cooking" value="cooking">
+                            <label class="form-check-label" for="cooking">
+                                Cooking
+                            </label>
+                        </div>
                     </div>
                 </div>
             </fieldset>
-            <button type="submit" class="btn btn-primary">Add Book</button>
+            <br>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </div>
         </form>
+        <hr>
         <div id="table">
-            <h1>Your Books</h1>
-            <table class="table">
+            <h1>Your books</h1>
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Author</th>
                         <th scope="col">Type</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
+                <tbody id='tableBody'></tbody>
             </table>
         </div>
     </div>
@@ -108,6 +110,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
